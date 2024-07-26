@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="relative">
+    <div class="messagebox w-[300px] h-[100px] absolute bg-grey900 text-white hidden justify-center items-start flex-col rounded-lg p-[20px] left-[40%] top-[2%]">
+        <h4 class="flex"><img src="../assets/images/icon-success-check.svg" alt=""> Message Sent</h4>
+        <p class="font-sans font-[500] text-[16px]">Thank you for your message. We will get back to you soon.</p>
+    </div>
+
+    <div class="main bg-green200 h-[100%] pt-[50px] pb-[50px] flex items-center justify-center">
+        <div class="container bg-white w-[700px] h-[100%] rounded-lg p-[40px]">
+            <div class="title ">
+                <h2 class="font-sans font-[500] text-[28px]">Contact Us</h2>
+            </div>
+            <div class="firstLine flex gap-[20px] mt-[25px]">
+                <div class="firstname w-[50%]">
+                    <label for="fname" class="font-sans font-[500] text-grey500 text-[16px]">First Name</label>
+                    <input type="text" name="fname" id="fname"
+                        class="mt-[10px] w-[100%] border-[1px] rounded-lg border-grey500 hover:border-green600 transition-all h-[40px]">
+                </div>
+                <div class="lastname w-[50%]">
+                    <label for="lname" class="font-sans font-[500] text-grey500 text-[16px]">Last Name</label>
+                    <input type="email" name="lname" id="lname"
+                        class="mt-[10px] w-[100%] border-[1px] rounded-lg border-grey500 hover:border-green600 transition-all h-[40px]">
+                </div>
+            </div>
+            <div class="secondLine mt-[25px]">
+                <label for="email" class="font-sans font-[500] text-grey500 text-[16px]">Email Address</label>
+                <input type="text" name="email" id="email"
+                    class="mt-[10px] w-[100%] border-[1px] rounded-lg border-grey500 hover:border-green600 transition-all h-[40px]">
+            </div>
+            <div class="thirdline mt-[25px]">
+                <label for="query" class="font-sans font-[500] text-grey500 text-[16px]">Query Type</label>
+                <div class="radio flex gap-[15px]">
+                    <div
+                        class="qbox qbox1 mt-[10px] w-[50%] flex justify-items-start items-center border-[1px]  border-grey500 hover:border-green600 transition-all pl-[25px] gap-[20px] rounded-lg" onclick="rselected(this, gquery)">
+                        <input type="radio" name="query" id="gquery"
+                            class="rquery gquery border-[1px] rounded-lg border-green600 h-[40px]"> General Enquiry
+                    </div>
+                    <div
+                        class="qbox mt-[10px] w-[50%] flex justify-items-start items-center border-[1px] border-grey500 hover:border-green600 transition-all pl-[25px] gap-[20px] rounded-lg" onclick="rselected(this, squery)">
+                        <input type="radio" name="query" id="squery"
+                            class="squery rquery border-[1px] rounded-lg border-green600 h-[40px] text-green600"> Support Request
+                    </div>
+                </div>
+            </div>
+            <div class="forthline mt-[25px]">
+                <label for="message" class="font-sans font-[500] text-grey500 text-[16px]">Message</label>
+                <textarea name="message" id="message"
+                    class="mt-[10px] w-[100%] border-[1px] rounded-lg border-grey500 hover:border-green600 transition-all h-[100px]"></textarea>
+            </div>
+            <div class="fifthline mt-[25px]">
+                <input type="checkbox" name="consent" id="consent">
+                <label for="consent" class="font-sans font-[500] text-grey500 text-[16px]">I consent to being contacted by the team *
+            </div>
+            <div class="sixthline mt-[25px]">
+                <button onclick="submit()"
+                    class="w-[100%] bg-green600 hover:bg-grey900 transition-all text-white font-sans font-[500] text-[16px] rounded-lg h-[40px]">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
